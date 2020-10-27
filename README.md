@@ -1,6 +1,6 @@
 ![Test Image 3](./FinalProjectUMLDiagram.png)
 
-##Classes Breakdown:
+## Classes Breakdown:
 1. Db: Source of truth for all data. Operations: getInstance, getAllUsers, addUser, deleteUserById, updateUserById, getEventById, addEvent, deleteEventById, updateEventById, getInterestedUsersByAddress, getInteresteEventsByAddress
 2. User. Represents a single user in the system. Getters for basic data. Operations: getName, getAddress, getEventType, setName, setAddress, setEventType, notifyUser
 3. Event. Represents a single event in teh system. Getters for basic data. Operations: getTitle, getAddress, getEventType, setTitle, setAddress, setEventType,
@@ -9,13 +9,13 @@
 6. AnalyticsManager: Gets analytics for the client, connects to the UserManager and EventManager. Operations: getInterestedUsersByAddress. 
 7. NotificationManager: Handles the notification logic, connects to the Db. Operations: getInterestedUsersByAddress. 
 
-##Database Tables:
+## Database Tables:
 UsersTable. UUID id, String name, String address, List<EventType> interestedEventTypes
 
 EventsTable. UUID id, String title, String address, EventType eventType
 
-##Testing Instructions:
-Start up the server with `gradlew bootRun`
+## Testing Instructions:
+Start up the server with `./gradlew bootRun`
 Make the following curl calls
 ```
 curl --location --request POST 'http://localhost:8080/users' \
